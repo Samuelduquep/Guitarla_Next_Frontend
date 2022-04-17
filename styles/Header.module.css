@@ -1,0 +1,157 @@
+.header {
+  background-image: linear-gradient(to right, rgb(0 0 0/0.8), rgb(0 0 0/0.7)),
+    url(../public/img/header.jpg);
+  background-size: cover;
+  background-position: 50%;
+  padding: 10rem 0;
+  position: relative;
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .barra {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.navegacion {
+  margin-top: 5rem;
+  display: flex;
+  gap: 2rem;
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+  .navegacion {
+    margin-top: 0;
+  }
+}
+
+.navegacion a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+
+.navegacion a:hover {
+  background-color: var(--primary);
+}
+
+.modelo {
+  color: var(--blanco);
+  margin-top: 5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .modelo {
+    text-align: left;
+    width: 50%;
+  }
+}
+
+.modelo h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.precio {
+  font-size: 5.6rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 2rem 0;
+}
+
+.descripcion {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  font-size: 2.2rem;
+}
+
+.enlace {
+  margin-top: 0;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--blanco);
+  border: 2px solid var(--primary);
+  padding: 1rem 5rem;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+
+.enlace:hover {
+  background-color: var(--primary);
+  color: var(--blanco);
+  border: 2px solid var(--primary);
+}
+
+.guitarra{
+  display: none;
+}
+
+.caja_carrito{
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.caja_carrito p {
+  text-align: center;
+  color: var(--blanco);
+  position: absolute;
+  top: -3.5rem;
+  right: 0.3rem;
+  background-color: var(--primary);
+  border-radius: 2rem;
+  padding: 1px;
+  height: 2rem;
+  width: 2rem;
+}
+
+@media (min-width: 992px) {
+    .guitarra{
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      animation-name: mostrarImagen;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes mostrarImagen {
+  0%{
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+

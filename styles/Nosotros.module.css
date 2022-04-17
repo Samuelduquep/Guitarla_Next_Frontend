@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+  .contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.contenido p{
+    text-align: justify;
+}

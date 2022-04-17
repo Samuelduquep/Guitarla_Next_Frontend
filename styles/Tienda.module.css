@@ -1,0 +1,16 @@
+.tienda{
+    display: grid;
+    gap: 4rem;
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .tienda{
+       grid-template-columns: repeat(2, 1fr) ;
+    }  
+}
+@media (min-width: 992px) {
+    .tienda{
+       grid-template-columns: repeat(3, 1fr) ;
+    }  
+}
