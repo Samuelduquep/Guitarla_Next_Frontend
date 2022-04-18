@@ -18,14 +18,15 @@ function MyApp({ Component, pageProps }) {
   }, [carrito])
   
 
-  const agregarCarrito = producto => {
-    if(carrito.some((articulo) => articulo._id === producto._id  && articulo.cantidad === producto.cantidad)){
+  const agregarCarrito = producto => { 
+   
+    if(carrito.some((articulo) => articulo.id === producto.id  && articulo.cantidad === producto.cantidad)){
       alert('Articulo ya está en el carrito')
     
-    } else if (carrito.some((articulo) => articulo._id === producto._id && articulo.cantidad !== producto.cantidad)){
+    } else if (carrito.some((articulo) => articulo.id === producto.id && articulo.cantidad !== producto.cantidad)){
       alert('Carrito Actualizado')
       const carritoActualizado = carrito.map((articulo)=> {
-        if(articulo._id === producto._id){
+        if(articulo.id === producto.id){
           articulo.cantidad = producto.cantidad;
         }
 
@@ -55,7 +56,7 @@ function MyApp({ Component, pageProps }) {
   const eliminarProducto = producto => {
     const opcion = confirm(`Deseas Eliminar el Articulo  ${producto.nombre}`);
       if (opcion == true) {
-          const carritoActualizado = carrito.filter(articulo => articulo._id !== producto._id )
+          const carritoActualizado = carrito.filter(articulo => articulo.id !== producto.id )
           setCarrito(carritoActualizado)
           alert("Articulo Eliminado")
     } else {
